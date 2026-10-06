@@ -2678,7 +2678,7 @@ section {
   }
 
   .about-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
   .hero__stats-card {
@@ -7238,40 +7238,46 @@ body {
 
 .education-column__heading-icon,
 .edu-timeline-status-icon,
-.edu-timeline-mobile-title {
+.edu-timeline-mobile-title,
+.edu-timeline-lucide-icon {
+  display: none;
+}
+
+.education-column__title--mobile {
   display: none;
 }
 
 @media (max-width: 640px) {
   .education-column {
-    gap: 14px;
-    padding: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.88);
-    border-radius: 28px;
-    background: rgba(255, 255, 255, 0.28);
-    box-shadow: 0 14px 36px rgba(56, 43, 27, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    gap: 0;
+    padding: 18px 16px;
+    border: 1px solid rgba(54, 43, 23, 0.12);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.38);
+    box-shadow: 0 8px 24px rgba(56, 43, 27, 0.04);
   }
 
   .education-column__heading {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 12px;
-    font-size: clamp(1.15rem, 5.8vw, 1.65rem);
+    gap: 0;
+    margin-bottom: 14px;
+    font-size: 1.35rem;
     line-height: 1.12;
     text-align: left;
   }
 
   .education-column__heading-icon {
-    display: grid;
-    flex: none;
-    width: clamp(54px, 16vw, 68px);
-    aspect-ratio: 1;
-    place-items: center;
-    border-radius: 22px;
-    background: linear-gradient(135deg, #362b17, #a08147);
-    color: #fff;
-    -webkit-text-fill-color: #fff;
+    display: none;
+  }
+
+  .education-column__title--desktop {
+    display: none;
+  }
+
+  .education-column__title--mobile {
+    display: inline;
   }
 
   .education-column__heading-icon svg {
@@ -7289,34 +7295,36 @@ body {
     backdrop-filter: none;
   }
 
-  .edu-timeline-header,
-  .edu-timeline-line {
+  .edu-timeline-header {
     display: none;
   }
 
   .edu-timeline {
-    gap: 12px;
-    padding: 0;
+    position: relative;
+    gap: 20px;
+    padding: 4px 0 0 2px;
+  }
+
+  .edu-timeline-line {
+    display: block;
+    top: 8px;
+    bottom: 8px;
+    left: 7px;
+    width: 2px;
+    border-radius: 0;
+    background: linear-gradient(180deg, #c89d45, rgba(110, 103, 93, 0.18));
+    transform: none !important;
   }
 
   .edu-timeline-item {
-    grid-template-columns: clamp(60px, 20vw, 82px) minmax(0, 1fr);
-    align-items: center;
-    gap: 12px;
-    padding: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.92);
-    border-left: 6px solid #362b17;
-    border-radius: 22px;
-    background: rgba(255, 255, 255, 0.72);
-    box-shadow: 0 10px 28px rgba(56, 43, 27, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.92);
-  }
-
-  .edu-timeline-item:nth-of-type(n + 2) {
-    border-left-color: #a08147;
-  }
-
-  .edu-timeline-item:first-of-type {
-    background: linear-gradient(115deg, rgba(255, 255, 255, 0.9), rgba(247, 241, 225, 0.82));
+    grid-template-columns: 14px minmax(0, 1fr);
+    align-items: start;
+    gap: 10px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
   }
 
   .edu-timeline-item--left .edu-timeline-card,
@@ -7331,35 +7339,29 @@ body {
   .edu-timeline-item--right .edu-timeline-icon-badge {
     grid-column: 1;
     grid-row: 1;
-    justify-self: stretch;
-    align-self: center;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-    margin: 0;
-    border: 2px solid rgba(160, 129, 71, 0.22);
-    border-radius: 20px;
-    background: #f1eee4;
-    color: #362b17;
+    justify-self: center;
+    align-self: start;
+    width: 12px;
+    height: 12px;
+    margin: 5px 0 0;
+    border: 2px solid rgba(110, 103, 93, 0.34);
+    border-radius: 50%;
+    background: var(--bg, #fbfaf7);
+    color: transparent;
     box-shadow: none;
+  }
+
+  .edu-timeline-item:first-of-type .edu-timeline-icon-badge {
+    border-color: #c89d45;
+    background: #c89d45;
   }
 
   .edu-timeline-icon-badge svg {
     display: none;
   }
 
-  .edu-timeline-item:first-of-type .edu-timeline-icon-badge {
-    border-color: transparent;
-    background: linear-gradient(145deg, #362b17, #a08147);
-    color: #fff;
-    box-shadow: 0 8px 18px -10px rgba(54, 43, 23, 0.55);
-  }
-
   .edu-timeline-short {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 900;
-    line-height: 1;
+    display: none;
   }
 
   .edu-timeline-card {
@@ -7383,11 +7385,11 @@ body {
   .edu-timeline-mobile-title {
     display: block;
     grid-row: 1;
-    margin: 0 0 3px;
+    margin: 0 0 6px;
     color: var(--ink-body, #0f172a);
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.28;
   }
 
   .edu-timeline-field {
@@ -7398,9 +7400,9 @@ body {
     grid-row: 2;
     margin: 0;
     color: var(--muted, #6e675d);
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     font-weight: 450;
-    line-height: 1.35;
+    line-height: 1.45;
   }
 
   .edu-timeline-institution svg {
@@ -7412,32 +7414,31 @@ body {
     grid-row: 3;
     align-items: center;
     justify-content: flex-start;
-    gap: 8px;
-    margin: 8px 0 0;
-    padding-top: 9px;
-    border-top: 1px solid rgba(54, 43, 23, 0.1);
+    gap: 6px;
+    margin: 10px 0 0;
+    padding: 0;
+    border: 0;
   }
 
   .edu-timeline-status,
   .edu-timeline-status--present {
-    gap: 7px;
-    padding: 5px 10px;
+    gap: 6px;
+    padding: 5px 9px;
     border: 1px solid rgba(160, 129, 71, 0.2);
     border-radius: 999px;
-    background: rgba(160, 129, 71, 0.08);
-    box-shadow: none;
+    background: rgba(255, 255, 255, 0.52);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
     color: #a08147;
-    font-size: 0.72rem;
-    font-weight: 850;
+    font-size: 0.76rem;
+    font-weight: 750;
     letter-spacing: 0;
     text-transform: none;
   }
 
   .edu-timeline-status--present {
-    border-color: transparent;
-    background: linear-gradient(135deg, #362b17, #6d5831);
-    box-shadow: 0 5px 12px -7px rgba(54, 43, 23, 0.7);
-    color: #fff;
+    border-color: rgba(200, 157, 69, 0.34);
+    background: rgba(237, 215, 169, 0.32);
+    color: #6f5120;
   }
 
   .edu-timeline-pulse {
@@ -7445,13 +7446,15 @@ body {
   }
 
   .edu-timeline-status-icon {
-    display: inline-block;
-    color: #a08147;
-    font-size: 0.78rem;
+    display: none;
   }
 
-  .edu-timeline-status--present .edu-timeline-status-icon {
-    color: #edd7a9;
+  .edu-timeline-lucide-icon {
+    display: block;
+    width: 14px;
+    height: 14px;
+    flex: none;
+    stroke-width: 2;
   }
 }
 

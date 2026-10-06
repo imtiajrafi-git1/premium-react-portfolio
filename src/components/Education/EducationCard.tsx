@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { FaCalendarAlt, FaGraduationCap, FaMapMarkerAlt } from "react-icons/fa";
+import { CheckCircle2, Clock3 } from "lucide-react";
 
 const educationData = [
   {
     id: 1,
     short: "B.Sc.",
-    mobileTitle: "Software Engineering",
+    mobileTitle: "B.Sc. in Software Engineering",
     degree: "Bachelor of Science (B.Sc.)",
     field: "Software Engineering",
     institution: "Daffodil International University",
@@ -93,6 +94,11 @@ export default function EducationCard() {
                   <span className={`edu-timeline-status ${edu.status === "Present" ? "edu-timeline-status--present" : ""}`}>
                     {edu.status === "Present" && <i className="edu-timeline-pulse" aria-hidden="true" />}
                     <FaCalendarAlt className="edu-timeline-status-icon" aria-hidden="true" />
+                    {edu.status === "Present" ? (
+                      <Clock3 className="edu-timeline-lucide-icon" aria-hidden="true" />
+                    ) : (
+                      <CheckCircle2 className="edu-timeline-lucide-icon" aria-hidden="true" />
+                    )}
                     {edu.status}
                   </span>
                 </div>

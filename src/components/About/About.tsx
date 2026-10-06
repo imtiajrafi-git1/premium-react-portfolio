@@ -48,7 +48,8 @@ export default function About() {
             <span className="education-column__heading-icon" aria-hidden="true">
               <FaUniversity />
             </span>
-            Education Background
+            <span className="education-column__title--desktop">Education Background</span>
+            <span className="education-column__title--mobile">Education Background</span>
           </h2>
           <EducationCard />
         </div>
