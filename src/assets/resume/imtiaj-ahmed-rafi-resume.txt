@@ -1,0 +1,22 @@
+Imtiaj Ahmed Rafi
+Creative Front-End Developer
+
+Profile
+Creative front-end developer focused on premium React interfaces, responsive websites, elegant motion, and polished user experiences for clients and recruiters.
+
+Education
+Bachelor of Science (B.Sc.) in Software Engineering, Daffodil International University - Present
+Higher Secondary Certificate (HSC), Milestone College
+Secondary School Certificate (SSC), Hirapur Ideal High School & College
+
+Highlights
+30+ Projects
+20+ Happy Clients
+3+ Years Learning
+
+Skills
+React, JavaScript, CSS3, Responsive UI, Framer Motion, GSAP, UI Engineering, Web Performance, Git, AWS Learning Path
+
+Social
+GitHub: https://github.com/imtiajrafi-git1
+LinkedIn: https://www.linkedin.com/in/imtiaj-ahmed-rafi
